@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "69106370-6860-4677-9f8d-fc06ddd17969",
+		"name": "Express Assessment",
+		"description": "Collection to test Express API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8434225"
+	},
+	"item": [
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": [
+								"",
+								"/Users/swetabhmukherjee/Desktop/noapp/NoApp.postman_collection.json"
+							]
+						}
+					]
+				},
+				"url": "http://localhost:3000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "Download File",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/download/testfile.txt"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate JWT Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:3000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Access Protected Route",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MjEzMDAwLCJleHAiOjE3MTYyMTY2MDB9.IhoEje37qP_kULhd_e6y2BaIYqhIsN85lJFso4WHQRo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/protected"
+			},
+			"response": []
+		}
+	]
+}
